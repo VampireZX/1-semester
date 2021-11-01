@@ -1,0 +1,73 @@
+#pragma hdrstop
+#pragma argsused
+
+#ifdef _WIN32
+#include <tchar.h>
+#else
+  typedef char _TCHAR;
+  #define _tmain main
+#endif
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#include <iostream>
+
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+double x,y,z,a,b;
+int c;
+		cout<<("Enter a: ");
+		cin>>a;
+		cout<<("Enter b: ");
+		cin>>b;
+		cout<<("Enter z: ");
+		cin>>z;
+			if(z>=1) x=z+log(z);
+				else x=pow(z,3)+2;
+		cout<<("Choose f(x): \n1)2*x\n2)x^2\n3)x/3\n");
+		cout<<("My answer: ");
+		cin>>c;
+			switch(c)
+	{			case 1:
+					cout<<("Ur choose is 2x\n")<<endl;
+					y = 2*a*pow(cos(pow((x),2)),3)+pow(sin(pow((x),3)),2)-(b*2*x);
+					cout<<("y = ");
+					cout<<y;
+					cout<<("\nThe calculations were performed at a = "); cout<<a;
+					cout<<(", b = "); cout<<b;
+					cout<<(", z = "); cout<<z;
+					cout<<(", f(x) = 2x");
+				break;
+				case 2:
+					cout<<("Ur choose is x^2")<<endl;
+					y = 2*a*pow(cos(pow((x),2)),3)+pow(sin(pow((x),3)),2)-(b*pow(x,2));
+					cout<<("y = ");
+					cout<<y;
+					cout<<("\nThe calculations were performed at a = "); cout<<a;
+					cout<<(", b = "); cout<<b;
+					cout<<(", z = "); cout<<z;
+					cout<<(", f(x) = x^2");
+				break;
+				case 3:
+					cout<<("Ur choose is x/3")<<endl;
+					y = 2*a*pow(cos(pow((x),2)),3)+pow(sin(pow((x),3)),2)-(b*x/3);
+					cout<<("y = ");
+					cout<<y;
+					cout<<("\nThe calculations were performed at a = "); cout<<a;
+					cout<<(", b = "); cout<<b;
+					cout<<(", z = "); cout<<z;
+					cout<<(", f(x) = x/3");
+				break;
+				default:
+				cout<<("Error");
+				break;
+	}
+
+
+
+	getch();
+	return 0;
+}

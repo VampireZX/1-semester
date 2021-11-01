@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+#include <windows.h>
+#include <conio.h>
+using namespace std;
+
+int main (void)
+{
+double x = 14.26, y = -1.22, z = 3.5 * pow(10,-2), t;
+t = 2 * cos(x - 3.1415926 / 6) / (0.5 + pow(sin(y),2)) * (1+ z * z/ (3 - z * z / 5));
+	cout<< t;
+
+ getch();
+
+
+
+}
+

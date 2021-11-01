@@ -1,0 +1,4 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\ASUS\Desktop\oaip\1 semester\lab4\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(23,51): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\ASUS\Desktop\oaip\1 semester\lab4\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(81,9): warning C4101: k: неиспользованная локальная переменная
+  ConsoleApplication1.vcxproj -> C:\Users\ASUS\Desktop\oaip\1 semester\lab4\ConsoleApplication1\Debug\ConsoleApplication1.exe
