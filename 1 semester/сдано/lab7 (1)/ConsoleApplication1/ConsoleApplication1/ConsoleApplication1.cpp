@@ -19,7 +19,7 @@ int main()
 			i++;
 		}
 		
-		if ((i - k) % 2)
+		if ((i - k) % 2)1
 		{
 			for (t = k; t <= i; t++)
 			{
