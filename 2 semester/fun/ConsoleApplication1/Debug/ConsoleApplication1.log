@@ -1,0 +1,4 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\ASUS\Desktop\oaip\2 semester\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(31,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ASUS\Desktop\oaip\2 semester\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(57): warning C4715: choose1: значение возвращается не при всех путях выполнения
+  ConsoleApplication1.vcxproj -> C:\Users\ASUS\Desktop\oaip\2 semester\ConsoleApplication1\Debug\ConsoleApplication1.exe
