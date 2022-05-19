@@ -12,9 +12,9 @@ Stack *push(Stack *p, int chislo);
 void view(Stack *p);
 void checker(int m);
 void individual(Stack *p, int num);
-void Sort_p(Stack** p);
-void Sort_info(Stack* p);
-
+void sort_p(Stack** p);
+void sort_info(Stack* p);
+void del(Stack** p);
 
 int main()
 {
@@ -48,7 +48,7 @@ int main()
 
     }
 
-    while (l == 1)
+    while (1)
     {
         cout << "\n1)Просмотреть стек\n2)Добавить элемент\n3)Сортировка с помощью перестановки адресов\n4)Сортировка методом обмена иформацией\n5)Решение индивидуального задания(Поменять местами крайние элементы)\n0)Выход" << endl;
         cin >> l;
@@ -57,7 +57,7 @@ int main()
         {
         case 1:
 
-           
+
             cout << "Ваш стек:\n";
 
             if (begin)
@@ -74,7 +74,6 @@ int main()
             int m;
             cout << "Сколько элементов необоходимо добавить?" << endl;
             cin >> m;
-
             for (int i = 0; i < m; i++)
             {
                 cout << "Введите число: ";
@@ -82,19 +81,30 @@ int main()
                 cout << endl;
                 begin = push(begin, chislo);
             }
-            
+
             checker(m);
 
             break;
 
         case 3:
-            Sort_p(&begin);
+            begin = push(begin, 0);
+            sort_p(&begin);
+            del(&begin);
+            
+            cout << "\n";
+            view(begin);
+
+            break;
         case 4:
-            Sort_info(begin);
+            
+            sort_info(begin);
+            
+            cout << "\n";
+            view(begin);
 
+            break;
         case 5:
-
-           
+            
             cout << "Измененный стек:" << endl;
             individual(begin, num);
             view(begin);
@@ -120,6 +130,13 @@ Stack *push(Stack *p, int chislo)
     temp->next = p;
     return temp;
 
+}
+
+void del(Stack** p) {
+    Stack* t;
+    t = *p;
+    *p = (*p)->next;
+    delete t;
 }
 
 void view(Stack *p) 
@@ -157,16 +174,16 @@ void individual(Stack* p, int num)
     
     for (int i = 0; i < num; i++)
     {
-        if (i == 0) {
+       /*if (i == 0) {
 
             first->info = temp->info;
             first = temp;
-        }
+        }*/
 
         if (i == num - 1)
         {
             last = temp;
-            last->info = temp->info;
+            //last->info = temp->info;
         }
 
         temp = temp->next;
@@ -177,25 +194,32 @@ void individual(Stack* p, int num)
     last->info = s;
 }
 
-void Sort_p(Stack** p) {
+void sort_p(Stack** p) {
     Stack* t = NULL, * t1, * r;
+
     if ((*p)->next->next == NULL) return;
+
     do {
-        for (t1 = *p; t1->next->next != t; t1 = t1->next)
+
+        for (t1 = *p; t1->next->next != t; t1 = t1->next) {
+
             if (t1->next->info > t1->next->next->info) {
                 r = t1->next->next;
                 t1->next->next = r->next;
                 r->next = t1->next;
                 t1->next = r;
             }
+        }
         t = t1->next;
     } while ((*p)->next->next != t);
 }
 
-void Sort_info(Stack* p) {
+void sort_info(Stack* p) {
+
     Stack *t = NULL, *t1;
     int r;
     do {
+
         for (t1 = p; t1->next != t; t1 = t1->next)
             if (t1->info > t1->next->info) {
                 r = t1->info;

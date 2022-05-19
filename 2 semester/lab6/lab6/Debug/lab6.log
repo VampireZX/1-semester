@@ -1,0 +1,3 @@
+﻿  lab6.cpp
+D:\oaip\2 semester\lab6\lab6\lab6.cpp(122): warning C4715: switchfun: значение возвращается не при всех путях выполнения
+  lab6.vcxproj -> D:\oaip\2 semester\lab6\Debug\lab6.exe
