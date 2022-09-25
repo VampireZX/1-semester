@@ -1,3 +1,8 @@
-﻿  lab6.cpp
-D:\oaip\2 semester\lab6\lab6\lab6.cpp(122): warning C4715: switchfun: значение возвращается не при всех путях выполнения
-  lab6.vcxproj -> D:\oaip\2 semester\lab6\Debug\lab6.exe
+﻿  QueueLibrary.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sal.h(2361,1): error C2144: синтаксическая ошибка: перед "int" требуется ";"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sal.h(2361,8): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  Source.cpp
+D:\oaip\2 semester\lab6\lab6\Source.cpp(4,7): error C2143: синтаксическая ошибка: отсутствие ";" перед "using namespace"
+D:\oaip\2 semester\lab6\lab6\Source.cpp(4,7): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\oaip\2 semester\lab6\lab6\Source.cpp(211,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...

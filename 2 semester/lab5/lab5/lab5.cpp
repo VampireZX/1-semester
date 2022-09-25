@@ -195,7 +195,7 @@ void individual(Stack* p, int num)
 }
 
 void sort_p(Stack** p) {
-    Stack* t = NULL, * t1, * r;
+    Stack* t = NULL, * t1 = nullptr, * r;
 
     if ((*p)->next->next == NULL) return;
 
@@ -216,7 +216,7 @@ void sort_p(Stack** p) {
 
 void sort_info(Stack* p) {
 
-    Stack *t = NULL, *t1;
+    Stack *t = NULL, *t1 = nullptr;
     int r;
     do {
 
