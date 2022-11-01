@@ -41,8 +41,7 @@ double factorial(int k)
 }
 
 
-double fun1(double x)
-{
+double fun1(double x) {
 	return  cos(x);
 }
 
@@ -50,9 +49,7 @@ double fun1(double x)
 double fun2(double x, double sum, double n)
 {
 	for (double k = 1; k <= n; k++)
-	{
 		sum += pow(-1, k) * pow(x, 2 * k) / factorial(2 * k);
-	}
 	return sum;
 }
 
